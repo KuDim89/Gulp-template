@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*
+//Приклади використання змінних
+
+$base_font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$site_font: "Roboto", $base_font;
+
+$some_var: 100px;
+*/
+
+/*
+$COLOR_GREEN: #82b53f;
+$COLOR_RED: red;
+
+div {
+  color: $COLOR_RED; // Приклад використання
+}
+*/
+
+/*
+
+// Використання міксинів Scss
+
+@mixin size {
+  width: 100px;
+  height: 100px;
+}
+
+@mixin size ($width:100px, height: $width){   //Вказуємо параметри + параметри по-замовчуваню height=width=100px
+  width: $width * 1px; // Можна не множити тоді запис @include size (100px, 200px)
+  height: $height * 1px;
+}
+
+div {
+  @include size;
+}
+
+div {
+@include size(100, 200);
+}
+
+
+// Використання міксинів Sass
+
++size
+  width: 100px
+  height: 100px
+
+div
+  =size
+
+
+@include // Вставляємо в середину певні х-ки
+@extend  // Розширяємо батьківський елемент певними характеристиками
+
+*/
+
+.c {
+  width: 100px;
+  height: 100px;
+  background-color: #009ceb;
+  font-size: 22px;
+}
+
+.to {
+  width: 300px;
+  height: 150px;
+  background-color: red;
+  font-size: 22px;
+}
+
+.glo {
+  width: 50px;
+  height: 200px;
+  background-color: green;
+  font-size: 22px;
+}
+
+@media (max-width: 1024px) {
+  .c {
+    font-size: 22px;
+  }
+
+  .glo {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .c {
+    font-size: 16px;
+  }
+
+  .glo {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,64 @@
+/*
+
+// Використання міксинів Scss
+
+@mixin size {
+  width: 100px;
+  height: 100px;
+}
+
+@mixin size ($width:100px, height: $width){   //Вказуємо параметри + параметри по-замовчуваню height=width=100px
+  width: $width * 1px; // Можна не множити тоді запис @include size (100px, 200px)
+  height: $height * 1px;
+}
+
+div {
+  @include size;
+}
+
+div {
+@include size(100, 200);
+}
+
+
+// Використання міксинів Sass
+
++size
+  width: 100px
+  height: 100px
+
+div
+  =size
+
+
+@include // Вставляємо в середину певні х-ки
+@extend  // Розширяємо батьківський елемент певними характеристиками
+
+*/
+
+//import fonts
+@mixin font-face($family, $path, $svg, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$path}.eot");
+    src: url("#{$path}.eot?#iefix") format("embedded-opentype"), url("#{$path}.woff") format("woff"), url("#{$path}.ttf") format("truetype"), url("#{$path}.svg##{$svg}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// font px to rem
+@mixin  font-size($px-value){
+  font-size: $px-value / $body-font-size * 1rem;
+}
+
+//letter spacing px to em
+@mixin letter-spacing($px-value, $font-size) {
+  letter-spacing: $px-value / $font-size * 1em;
+}
+
+// relative line height
+@mixin line-height($px-value, $font-size){
+  line-height: $px-value / $font-size;
+}
+

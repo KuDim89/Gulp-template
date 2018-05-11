@@ -1,0 +1,17 @@
+// Підключення Css
+
+//@import "foo.css";
+//@import "foo" screen;
+//@import url(foo);
+
+
+// Підключення Scss
+
+@import "components/_variable";  // Заборонено писати розширення
+@import "components/_colors";
+@import "components/_mixin";
+@import "chunks/_header";         // Можна писати розширення але не рекомендується
+
+
+@import "pages/_home";
+
