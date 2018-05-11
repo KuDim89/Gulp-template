@@ -1,3 +1,1 @@
-var a = function () {
-    
-}
+'use strict'
